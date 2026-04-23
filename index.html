@@ -28,14 +28,12 @@ body {
     color: var(--text);
 }
 
-/* Layout */
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* Hero */
 .hero {
     text-align: center;
     margin-bottom: 80px;
@@ -57,11 +55,8 @@ body {
     padding: 6px 14px;
     background: rgba(30,41,59,0.7);
     border-radius: 20px;
-    font-size: 13px;
-    backdrop-filter: blur(10px);
 }
 
-/* Sections */
 .section {
     margin-bottom: 70px;
 }
@@ -71,14 +66,13 @@ body {
     margin-bottom: 20px;
 }
 
-/* Glass Card */
 .card, .exp-card {
     background: var(--card);
     padding: 22px;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.05);
     backdrop-filter: blur(12px);
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .card:hover, .exp-card:hover {
@@ -86,7 +80,6 @@ body {
     border-color: rgba(56,189,248,0.3);
 }
 
-/* Skills */
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -98,11 +91,6 @@ body {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    transition: 0.3s;
-}
-
-.skill:hover {
-    transform: scale(1.05);
 }
 
 .skill img {
@@ -110,7 +98,6 @@ body {
     margin-bottom: 8px;
 }
 
-/* Experience */
 .exp-card {
     margin-bottom: 20px;
 }
@@ -118,22 +105,17 @@ body {
 .exp-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.exp-header h3 {
-    font-size: 18px;
 }
 
 .exp-header span {
-    font-size: 13px;
     color: var(--muted);
+    font-size: 13px;
 }
 
 .exp-focus {
     color: var(--accent);
+    margin: 8px 0;
     font-size: 13px;
-    margin-bottom: 10px;
 }
 
 .metrics {
@@ -142,7 +124,6 @@ body {
     line-height: 1.6;
 }
 
-/* Footer */
 .footer {
     text-align: center;
     margin-top: 80px;
@@ -159,10 +140,10 @@ body {
 <!-- HERO -->
 <div class="hero">
     <h1>Michael Joseph Llona</h1>
-    <div class="tag">Energy Systems Builder</div>
+    <div class="tag">Energy Trader & Systems Builder</div>
     <p>
-        Energy trader building automated data systems for real-time market intelligence 
-        and decision support in WESM environments.
+        Energy trader with hands-on experience in WESM operations, managing generation assets 
+        and building automated systems for real-time market data and decision support.
     </p>
 </div>
 
@@ -172,22 +153,19 @@ body {
 
     <div class="card">
         <p>
-            Designed and built an end-to-end automated system for energy market data, transforming 
-            raw inputs into structured, real-time insights for trading decisions.
+            Designed and developed an end-to-end automated system for energy market data, 
+            transforming raw inputs into structured and actionable insights for trading decisions.
         </p><br>
 
-        <p><b>Architecture:</b></p>
-        <p>Scraper (Selenium) → Data Processing → PostgreSQL → Dashboard (Streamlit)</p><br>
-
-        <p><b>Key Focus:</b> Automation, Data Pipelines, Reliability</p><br>
+        <p><b>Architecture:</b> Scraper → Processing → PostgreSQL → Dashboard</p><br>
 
         <p>
-            The system automates repetitive workflows such as data collection, tagging, and reporting, 
-            while ensuring reliability through self-healing mechanisms for scraping operations.
+            The system automates repetitive workflows such as data extraction, tagging, and reporting, 
+            while ensuring reliability through self-healing scraping logic.
         </p><br>
 
         <p class="metrics">
-            Reduced manual workload • Improved data accuracy • Enabled real-time decision support
+            Reduced manual workload • Improved accuracy • Enabled real-time visibility
         </p>
     </div>
 </div>
@@ -202,7 +180,6 @@ body {
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><p>PostgreSQL</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><p>Git</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><p>HTML</p></div>
-        <div class="skill"><img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.svg"><p>Streamlit</p></div>
     </div>
 </div>
 
@@ -210,48 +187,73 @@ body {
 <div class="section">
     <h2>Experience</h2>
 
+    <!-- XIDIAN -->
     <div class="exp-card">
         <div class="exp-header">
             <h3>WESM Trader</h3>
             <span>Dec 2025 – Present</span>
         </div>
-        <p class="exp-focus">Xidian Holdings Philippines, Inc • Trading & Market Operations</p>
+        <p class="exp-focus">Xidian Holdings Philippines, Inc</p>
+
         <p>
-            Managing trading operations for solar and mini run-of-river hydro plants, ensuring 
-            compliance with WESM requirements while supporting daily market execution.
+            Currently responsible for trading operations within WESM, handling renewable energy assets 
+            including solar power plants and mini run-of-river hydro plants. The role involves active 
+            participation in market operations, ensuring compliance, and executing trading decisions 
+            based on market conditions.
         </p>
+
         <div class="metrics">
-            Real-time trading decisions • Market compliance • Renewable asset coordination
+            Managed trading for renewable generation assets • Executed market submissions and operational decisions • 
+            Ensured compliance with WESM protocols • Supported real-time trading execution
         </div>
     </div>
 
+    <!-- SUNWEST -->
     <div class="exp-card">
         <div class="exp-header">
             <h3>WESM Compliance Assistant</h3>
             <span>Jan 2025 – Present</span>
         </div>
-        <p class="exp-focus">Sunwest Water and Electric Company 2 • Automation & Reporting</p>
+        <p class="exp-focus">Sunwest Water and Electric Company 2</p>
+
         <p>
-            Focused on improving trading workflows through automation, reducing manual effort and 
-            increasing the reliability of reporting processes.
+            Managed compliance and trading support for a mini-hydro power plant portfolio, ensuring all 
+            market requirements such as look-ahead submissions, offered capacity compliance, and CPEMS 
+            transactions were executed accurately and on time.
         </p>
+
+        <p>
+            In parallel, developed automation tools to streamline reporting and data workflows, 
+            significantly improving efficiency and reliability.
+        </p>
+
         <div class="metrics">
-            ~80% faster reporting • 100% accurate price tagging • ~90% reduction in manual processing
+            ~80% faster report generation • 100% accurate price tagging • ~90% reduction in manual RTD processing • 
+            Improved consistency and reliability of trading submissions
         </div>
     </div>
 
+    <!-- ACE -->
     <div class="exp-card">
         <div class="exp-header">
             <h3>Trading Specialist</h3>
             <span>May 2024 – Nov 2024</span>
         </div>
-        <p class="exp-focus">ACE Shared Services Inc. • Market Execution</p>
+        <p class="exp-focus">ACE Shared Services Inc.</p>
+
         <p>
-            Executed trades across a diverse portfolio including BESS, coal, bunker, diesel, and 
-            geothermal power plants, supporting overall market performance.
+            Executed trades in both energy and reserve markets within WESM, supporting portfolio performance 
+            across a wide range of generation assets including BESS, coal, bunker, diesel, and geothermal plants.
         </p>
+
+        <p>
+            The role required coordination of submissions, monitoring of market conditions, and ensuring 
+            alignment between trading strategies and operational constraints of each asset.
+        </p>
+
         <div class="metrics">
-            Multi-asset trading • ASPA & BCQ submissions • Portfolio coordination
+            Multi-asset trading exposure • Managed ASPA and BCQ submissions • Supported trading strategies • 
+            Delivered structured performance reporting
         </div>
     </div>
 
@@ -263,8 +265,9 @@ body {
 
     <div class="card">
         <p>
-            I focus on building systems that bridge energy trading and technology, turning raw market 
-            data into structured insights through automation, data pipelines, and visualization.
+            My work sits at the intersection of energy trading and technology, where I build systems that 
+            transform raw market data into structured insights. I focus on improving efficiency, reliability, 
+            and decision-making through automation and data-driven workflows.
         </p>
     </div>
 </div>
