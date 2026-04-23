@@ -34,15 +34,14 @@ body {
     padding: 40px 20px;
 }
 
-/* HERO */
 .hero {
     text-align: center;
     margin-bottom: 60px;
 }
 
 .hero h1 {
-    font-size: 36px;
     color: var(--accent);
+    font-size: 36px;
 }
 
 .hero p {
@@ -51,25 +50,23 @@ body {
 }
 
 .tag {
-    display: inline-block;
     margin-top: 15px;
+    display: inline-block;
     padding: 6px 12px;
     background: #1e293b;
     border-radius: 20px;
     font-size: 13px;
 }
 
-/* SECTIONS */
 .section {
     margin-bottom: 60px;
 }
 
 .section h2 {
     color: var(--accent);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* CARD */
 .card {
     background: var(--card);
     padding: 20px;
@@ -77,7 +74,7 @@ body {
     border: 1px solid #1e293b;
 }
 
-/* SKILLS */
+/* Skills */
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -96,31 +93,43 @@ body {
     margin-bottom: 8px;
 }
 
-/* TIMELINE */
-.timeline {
-    border-left: 2px solid #1e293b;
-    padding-left: 20px;
+/* Experience Cards */
+.exp-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #1e293b;
 }
 
-.timeline-item {
-    margin-bottom: 30px;
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-.timeline-item h3 {
-    font-size: 16px;
+.exp-header h3 {
+    font-size: 18px;
 }
 
-.timeline-item span {
-    font-size: 13px;
+.exp-header span {
     color: var(--muted);
+    font-size: 13px;
 }
 
-.highlight {
+.exp-focus {
     color: var(--accent);
-    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-/* FOOTER */
+.metrics {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
 .footer {
     text-align: center;
     margin-top: 60px;
@@ -139,38 +148,18 @@ body {
     <h1>Michael Joseph Llona</h1>
     <div class="tag">Energy Systems Builder</div>
     <p>
-        Energy trader specializing in building automated data systems for real-time 
-        market intelligence and decision support.
+        Energy trader specializing in automated data systems for real-time market intelligence.
     </p>
 </div>
 
 <!-- PROJECT -->
 <div class="section">
     <h2>COGMA System</h2>
-
     <div class="card">
         <p><b>Description:</b> End-to-end automated energy market system.</p><br>
-
-        <p><b>Architecture:</b></p>
-        <p>Scraper → Processing → PostgreSQL → Dashboard</p><br>
-
-        <p><b>Key Focus:</b> <span class="highlight">Automation & Data Systems</span></p><br>
-
-        <p><b>Features:</b></p>
-        <ul>
-            <li>Real-time data scraping</li>
-            <li>Automated processing pipeline</li>
-            <li>Database integration</li>
-            <li>Dashboard visualization</li>
-            <li>Self-healing logic</li>
-        </ul><br>
-
-        <p><b>Impact:</b></p>
-        <ul>
-            <li>Reduced manual workload</li>
-            <li>Improved data accuracy</li>
-            <li>Enabled real-time decision support</li>
-        </ul>
+        <p><b>Architecture:</b> Scraper → Processing → PostgreSQL → Dashboard</p><br>
+        <p><b>Focus:</b> Automation & Data Systems</p><br>
+        <p><b>Impact:</b> Reduced manual workload and enabled real-time insights.</p>
     </div>
 </div>
 
@@ -179,35 +168,11 @@ body {
     <h2>Technical Skills</h2>
 
     <div class="skills">
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-            <p>Python</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg">
-            <p>Selenium</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
-            <p>PostgreSQL</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
-            <p>Git</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
-            <p>HTML</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.svg">
-            <p>Streamlit</p>
-        </div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"><p>Selenium</p></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><p>PostgreSQL</p></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><p>Git</p></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><p>HTML</p></div>
     </div>
 </div>
 
@@ -215,60 +180,75 @@ body {
 <div class="section">
     <h2>Experience</h2>
 
-    <div class="timeline">
-
-        <div class="timeline-item">
+    <!-- XIDIAN -->
+    <div class="exp-card">
+        <div class="exp-header">
             <h3>WESM Trader</h3>
-            <span>Xidian Holdings Philippines, Inc • Dec 2025 – Present</span>
-            <p class="highlight">Key Focus: Automation & Data Systems</p>
-            <ul>
-                <li>Manage trading operations and WESM compliance</li>
-                <li>Support market submissions and execution workflows</li>
-                <li>Improve trading processes through data-driven solutions</li>
-            </ul>
+            <span>Dec 2025 – Present</span>
         </div>
+        <p class="exp-focus">Xidian Holdings Philippines, Inc • Automation & Trading Systems</p>
 
-        <div class="timeline-item">
-            <h3>WESM Compliance Assistant</h3>
-            <span>Sunwest Water and Electric Company 2 • Jan 2025 – Present</span>
-            <p class="highlight">Key Focus: Process Automation & Reporting Systems</p>
-            <ul>
-                <li>Automated trading reports (↓ ~80% processing time)</li>
-                <li>Automated price tagging (instant + 100% accuracy)</li>
-                <li>Automated RTD downloads (↓ ~90% manual work)</li>
-                <li>Handled WESM compliance and submissions</li>
-            </ul>
+        <p>
+            Managing trading operations within WESM while supporting market execution, compliance, 
+            and system-level improvements in trading workflows.
+        </p>
+
+        <div class="metrics">
+            Focused on improving operational efficiency through data-driven workflows and system enhancements.
         </div>
-
-        <div class="timeline-item">
-            <h3>Trading Specialist</h3>
-            <span>ACE Shared Services Inc. • May 2024 – Nov 2024</span>
-            <p class="highlight">Key Focus: Trading Operations & Market Execution</p>
-            <ul>
-                <li>Executed trades in energy and reserve markets</li>
-                <li>Handled ASPA and BCQ submissions</li>
-                <li>Prepared trading performance reports</li>
-                <li>Coordinated with clients and internal teams</li>
-            </ul>
-        </div>
-
     </div>
+
+    <!-- SUNWEST -->
+    <div class="exp-card">
+        <div class="exp-header">
+            <h3>WESM Compliance Assistant</h3>
+            <span>Jan 2025 – Present</span>
+        </div>
+        <p class="exp-focus">Sunwest Water and Electric Company 2 • Automation & Reporting</p>
+
+        <p>
+            Supported trading operations of a mini-hydro plant, focusing on compliance, reporting, 
+            and full automation of market data workflows.
+        </p>
+
+        <div class="metrics">
+            Reduced report processing time by ~80% • Automated price tagging with 100% accuracy • 
+            Reduced RTD data processing effort by ~90%
+        </div>
+    </div>
+
+    <!-- ACE -->
+    <div class="exp-card">
+        <div class="exp-header">
+            <h3>Trading Specialist</h3>
+            <span>May 2024 – Nov 2024</span>
+        </div>
+        <p class="exp-focus">ACE Shared Services Inc. • Market Execution</p>
+
+        <p>
+            Executed trades across energy and reserve markets, supporting portfolio performance 
+            across multiple generation assets.
+        </p>
+
+        <div class="metrics">
+            Managed ASPA and BCQ submissions • Supported multi-asset trading operations • 
+            Delivered structured trading performance reports
+        </div>
+    </div>
+
 </div>
 
 <!-- ABOUT -->
 <div class="section">
     <h2>About</h2>
-
     <div class="card">
         <p>
-            I specialize in building systems that transform raw energy market data into structured, 
-            actionable insights. My work integrates automation, data pipelines, and visualization 
-            to improve efficiency and decision-making in trading environments.
+            I build systems that transform raw energy market data into structured, actionable insights, 
+            combining automation, data pipelines, and visualization.
         </p>
     </div>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
     Michael Joseph Llona • Portfolio
 </div>
