@@ -147,27 +147,47 @@ body {
     </p>
 </div>
 
-<!-- COGMA -->
+<!-- PROJECTS -->
 <div class="section">
-    <h2>COGMA System</h2>
+    <h2>Projects</h2>
 
-    <div class="card">
-        <p> Designed and developed an end-to-end automated system for energy market data, 
-        combining data ingestion, backend processing using Django, and visualization into 
-        a unified platform for trading insights.
-        </p><br>
+    <div class="exp-card">
+        <div class="exp-header">
+            <h3>COGMA System</h3>
+            <span>Python • Django • PostgreSQL</span>
+        </div>
 
-        <p><b>Architecture:</b> Scraper (Selenium) → Data Processing → Django Backend → PostgreSQL → Dashboard</p>
+        <p class="exp-focus">End-to-End Energy Market Data Platform</p>
 
         <p>
-            The system enables the user to monitor the power plants' schedule and output in real time, as well as visibility with weather condition parameters
-            tailored specifically to each type of power plant, like Solar & Hydro.
-        </p><br>
+            COGMA is a fully integrated system designed to automate the collection, processing, 
+            and visualization of energy market data within WESM environments. It transforms raw 
+            inputs into structured, real-time insights for trading and operational monitoring.
+        </p>
+
+        <p>
+            The system integrates automated scraping, backend processing using Django, and 
+            database storage to create a reliable data pipeline feeding real-time dashboards.
+        </p>
 
         <p class="metrics">
-            Reduced manual workload • Improved accuracy • Improved Compliance
+            Scraper (Selenium) → Data Processing → Django Backend → PostgreSQL → Dashboard
         </p>
+
+        <p class="exp-focus">Applications</p>
+
+        <p>
+            • Real-time monitoring of plant schedules and outputs<br>
+            • Weather-based analysis for solar and hydro generation<br>
+            • Automated reporting and compliance workflows<br>
+            • Centralized market data visibility
+        </p>
+
+        <div class="metrics">
+            Reduced manual workload • Improved accuracy • Strengthened compliance • Faster decision-making
+        </div>
     </div>
+
 </div>
 
 <!-- SKILLS -->
@@ -176,18 +196,18 @@ body {
 
     <div class="skills">
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"><p>Django</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"><p>Selenium</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><p>PostgreSQL</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><p>Git</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><p>HTML</p></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"><p>Django</p></div>
+    </div>
 </div>
 
 <!-- EXPERIENCE -->
 <div class="section">
     <h2>Experience</h2>
 
-    <!-- XIDIAN -->
     <div class="exp-card">
         <div class="exp-header">
             <h3>WESM Trader</h3>
@@ -196,19 +216,15 @@ body {
         <p class="exp-focus">Xidian Holdings Philippines, Inc</p>
 
         <p>
-            Currently responsible for trading operations within WESM, handling renewable energy assets, 
-            including solar power plants and mini run-of-river hydro plants. The role involves active 
-            participation in market operations, ensuring compliance, executing trading decisions, 
-            and the timely submission of Bilateral Contract Quantity (BCQ) in CRSS.
+            Responsible for trading operations within WESM, handling solar and mini run-of-river hydro plants, 
+            ensuring compliance, executing trading decisions, and managing BCQ submissions in CRSS.
         </p>
 
         <div class="metrics">
-            Managed trading for renewable generation assets • Executed market, BCQ submissions, and operational decisions • 
-            Ensured compliance with WESM protocols • Supported real-time trading execution
+            Renewable asset trading • Market execution • Compliance management • BCQ submissions
         </div>
     </div>
 
-    <!-- SUNWEST -->
     <div class="exp-card">
         <div class="exp-header">
             <h3>WESM Compliance Assistant</h3>
@@ -217,23 +233,15 @@ body {
         <p class="exp-focus">Sunwest Water and Electric Company 2</p>
 
         <p>
-            Managed compliance and trading support for a mini-hydro power plant portfolio, ensuring all 
-            market requirements, such as look-ahead submissions, offered capacity compliance, and CPEMS 
-            transactions were executed accurately and on time.
-        </p>
-
-        <p>
-            In parallel, developed automation tools to streamline reporting and data workflows, 
-            significantly improving efficiency and reliability.
+            Managed compliance and trading support for a mini-hydro portfolio, while developing automation 
+            systems to improve reporting workflows and operational efficiency.
         </p>
 
         <div class="metrics">
-            ~80% faster report generation • 100% accurate price tagging • ~90% reduction in manual RTD processing • 
-            Improved consistency and reliability of trading submissions
+            ~80% faster reports • 100% accurate tagging • ~90% reduced manual processing
         </div>
     </div>
 
-    <!-- ACE -->
     <div class="exp-card">
         <div class="exp-header">
             <h3>Trading Specialist</h3>
@@ -242,18 +250,12 @@ body {
         <p class="exp-focus">ACE Shared Services Inc.</p>
 
         <p>
-            Executed trades in both energy and reserve markets within WESM, supporting portfolio performance 
-            across a wide range of generation assets, including BESS, coal, bunker, diesel, and geothermal plants.
-        </p>
-
-        <p>
-            The role required coordination of submissions, monitoring of market conditions, and ensuring 
-            alignment between trading strategies and operational constraints of each asset.
+            Executed trades across BESS, coal, bunker, diesel, and geothermal assets, supporting 
+            portfolio performance and market participation.
         </p>
 
         <div class="metrics">
-            Multi-asset trading exposure • Managed ASPA and BCQ submissions • Supported trading strategies • 
-            Delivered structured performance reporting
+            Multi-asset trading • ASPA & BCQ submissions • Market coordination
         </div>
     </div>
 
@@ -265,9 +267,8 @@ body {
 
     <div class="card">
         <p>
-            My work sits at the intersection of energy trading and technology, where I build systems that 
-            transform raw market data into structured insights and custom systems for the enegy market. I focus on improving efficiency, reliability, 
-            and decision-making through automation and data-driven workflows.
+            I build systems at the intersection of energy trading and technology, transforming 
+            raw market data into structured insights through automation and data pipelines.
         </p>
     </div>
 </div>
@@ -275,6 +276,11 @@ body {
 <div class="footer">
     Michael Joseph Llona • Portfolio
 </div>
+
+</div>
+
+</body>
+</html>
 
 </div>
 
