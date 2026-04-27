@@ -200,10 +200,34 @@ body {
             <span>Python • Django • PostgreSQL • Streamlit</span>
         </div>
 
-        <p class="exp-focus">End-to-End Energy Market Data Platform</p>
+        <p class="exp-focus">WESM Monitoring System</p>
 
         <p>
-            A system that automates data collection, processing, and visualization for energy trading workflows.
+            ## Overview
+            COGMA is a data automation and monitoring system designed to support energy trading operations and compliance tracking. It streamlines the collection, processing, and visualization of market and operational data, enabling traders to make faster and more informed decisions.
+
+            ## Description
+            COGMA automates the extraction of market data using Selenium-based web scraping, eliminating the need for manual data collection. The extracted data is stored in a PostgreSQL database, ensuring structured, consistent, and reliable access.
+
+            The system presents this data through an interactive dashboard built with Streamlit and Plotly, allowing users to monitor key metrics such as Real-Time Dispatch (RTD), plant output, and market prices in real time.
+
+            To provide additional operational context, COGMA also integrates external weather data via the Open-Meteo API, helping users anticipate factors that may impact plant performance.
+
+
+            ## Application
+
+           COGMA is used to monitor price movements and analyze variances between RTD and actual plant output. This supports compliance with operational requirements such as FAS, OCC, and DCS by giving traders clear and timely visibility into plant performance.
+
+           By centralizing data and automating workflows, the system reduces manual effort, minimizes errors, and improves overall efficiency in trading operations.
+
+
+           ## System Architecture
+
+           Selenium (Web Scraping)  
+           → Data Extraction from Market Sources  
+           → PostgreSQL (Data Storage)  
+           → Streamlit + Plotly (Visualization Dashboard)  
+           → Open-Meteo API (Weather Data Integration)
         </p>
 
         <p class="metrics">
