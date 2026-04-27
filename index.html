@@ -129,47 +129,42 @@ body {
     line-height: 1.6;
 }
 
-/* IMAGE HOVER + CLICK */
-.preview-img {
+/* SLIDER */
+.slider {
+    position: relative;
+    margin-top: 20px;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
     width: 100%;
     border-radius: 10px;
-    margin-top: 15px;
-    transition: transform 0.3s ease;
+}
+
+.active {
+    display: block;
+}
+
+.buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.buttons button {
+    background: var(--card);
+    color: var(--text);
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
     cursor: pointer;
+    border-radius: 6px;
 }
 
-.preview-img:hover {
-    transform: scale(1.03);
-}
-
-.caption {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 5px;
-}
-
-/* LIGHTBOX */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-}
-
-.lightbox img {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 80%;
-}
-
-.lightbox:target {
-    display: block;
+.buttons button:hover {
+    background: var(--accent);
 }
 
 /* FOOTER */
@@ -215,45 +210,33 @@ body {
             Scraper → Django → PostgreSQL → Streamlit Dashboard
         </p>
 
-        <p class="exp-focus">System Preview</p>
-        <p class="caption">Screenshots use sanitized data.</p>
+        <!-- SLIDER -->
+        <div class="slider">
 
-        <!-- IMAGE 1 -->
-        <a href="#img1">
-            <img src="cogma-dashboard.png" class="preview-img">
-        </a>
-        <p class="caption">Overview dashboard.</p>
+            <div class="slides active">
+                <img src="Hydro RTD & Output.png">
+            </div>
 
-        <!-- IMAGE 2 -->
-        <a href="#img2">
-            <img src="cogma-detail.png" class="preview-img">
-        </a>
-        <p class="caption">Detailed analysis view.</p>
+            <div class="slides">
+                <img src="Solar RTD & Output Price.png">
+            </div>
 
-        <!-- IMAGE 3 -->
-        <a href="#img3">
-            <img src="cogma-data.png" class="preview-img">
-        </a>
-        <p class="caption">Structured data output.</p>
+            <div class="slides">
+                <img src="Solar.png">
+            </div>
+
+            <div class="buttons">
+                <button onclick="prevSlide()">Prev</button>
+                <button onclick="nextSlide()">Next</button>
+            </div>
+
+        </div>
 
         <div class="metrics">
             Reduced manual workload • Improved accuracy • Faster decisions
         </div>
     </div>
 
-</div>
-
-<!-- LIGHTBOXES -->
-<div id="img1" class="lightbox">
-    <a href="#"><img src="Hydro RTD & Output.png"></a>
-</div>
-
-<div id="img2" class="lightbox">
-    <a href="#"><img src="Solar.png"></a>
-</div>
-
-<div id="img3" class="lightbox">
-    <a href="#"><img src="Solar RTD & Output Price.png"></a>
 </div>
 
 <!-- SKILLS -->
@@ -271,12 +254,81 @@ body {
     </div>
 </div>
 
-<!-- FOOTER -->
+<!-- EXPERIENCE -->
+<div class="section">
+    <h2>Experience</h2>
+
+    <div class="exp-card">
+        <div class="exp-header">
+            <h3>WESM Trader</h3>
+            <span>Dec 2025 – Present</span>
+        </div>
+        <p class="exp-focus">Xidian Holdings Philippines, Inc</p>
+        <p>
+            Responsible for trading operations within WESM, handling solar and mini run-of-river hydro plants, ensuring compliance, executing trading decisions, and managing BCQ submissions in CRSS.
+        </p>
+    </div>
+
+    <div class="exp-card">
+        <div class="exp-header">
+            <h3>WESM Compliance Assistant</h3>
+            <span>Jan 2025 – Dec 2025</span>
+        </div>
+        <p class="exp-focus">Sunwest Water and Electric Company 2</p>
+        <p>
+            Managed compliance and trading support for a mini-hydro portfolio, while developing automation systems to improve reporting workflows and operational efficiency.
+        </p>
+    </div>
+
+    <div class="exp-card">
+        <div class="exp-header">
+            <h3>Trading Specialist</h3>
+            <span>May 2024 – Nov 2024</span>
+        </div>
+        <p class="exp-focus">ACE Shared Services Inc.</p>
+        <p>
+            Executed trades across BESS, coal, bunker, diesel, and geothermal assets, supporting portfolio performance and market participation.
+        </p>
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>About</h2>
+
+    <div class="card">
+        <p>
+            I build systems at the intersection of energy trading and technology, transforming raw market data into structured insights through automation and data pipelines.
+        </p>
+    </div>
+</div>
+
 <div class="footer">
     Michael Joseph Llona • Portfolio
 </div>
 
 </div>
+
+<script>
+let index = 0;
+const slides = document.getElementsByClassName("slides");
+
+function showSlide(i) {
+    for (let s of slides) s.classList.remove("active");
+    slides[i].classList.add("active");
+}
+
+function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+}
+
+function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+}
+</script>
 
 </body>
 </html>
