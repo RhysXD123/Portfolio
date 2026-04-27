@@ -197,56 +197,65 @@ body {
     <div class="exp-card">
         <div class="exp-header">
             <h3>COGMA System</h3>
-            <span>Python • Django • PostgreSQL • Streamlit</span>
+            <span>Python • Django • PostgreSQL • Streamlit • Selenium</span>
         </div>
 
         <p class="exp-focus">WESM Monitoring System</p>
 
-        <p>
-            ## Overview
-            COGMA is a data automation and monitoring system designed to support energy trading operations and compliance tracking. It streamlines the collection, processing, and visualization of market and operational data, enabling traders to make faster and more informed decisions.
+        <!-- OVERVIEW -->
+        <div class="exp-block">
+            <h4>Overview</h4>
+            <p>
+                COGMA is a data automation and monitoring system designed to support energy trading operations and compliance tracking. It streamlines the collection, processing, and visualization of market and operational data, enabling faster and more informed decision-making.
+            </p>
+        </div>
 
-            ## Description
-            COGMA automates the extraction of market data using Selenium-based web scraping, eliminating the need for manual data collection. The extracted data is stored in a PostgreSQL database, ensuring structured, consistent, and reliable access.
+        <!-- DESCRIPTION -->
+        <div class="exp-block">
+            <h4>Description</h4>
+            <p>
+                The system automates market data extraction using Selenium-based web scraping, removing the need for manual data collection. Extracted data is stored in PostgreSQL, ensuring structured and reliable access.
+            </p>
+            <p>
+                Data is visualized through an interactive dashboard built with Streamlit and Plotly, allowing real-time monitoring of key metrics such as RTD, plant output, and market prices.
+            </p>
+            <p>
+                COGMA also integrates weather data via the Open-Meteo API, providing additional context that may impact plant performance.
+            </p>
+        </div>
 
-            The system presents this data through an interactive dashboard built with Streamlit and Plotly, allowing users to monitor key metrics such as Real-Time Dispatch (RTD), plant output, and market prices in real time.
+        <!-- APPLICATION -->
+        <div class="exp-block">
+            <h4>Application</h4>
+            <p>
+                COGMA helps traders monitor price movements and analyze variances between RTD and actual output, supporting compliance with FAS, OCC, and DCS requirements.
+            </p>
+            <p>
+                By centralizing data and automating workflows, the system reduces manual effort, minimizes errors, and improves operational efficiency.
+            </p>
+        </div>
 
-            To provide additional operational context, COGMA also integrates external weather data via the Open-Meteo API, helping users anticipate factors that may impact plant performance.
-
-
-            ## Application
-
-           COGMA is used to monitor price movements and analyze variances between RTD and actual plant output. This supports compliance with operational requirements such as FAS, OCC, and DCS by giving traders clear and timely visibility into plant performance.
-
-           By centralizing data and automating workflows, the system reduces manual effort, minimizes errors, and improves overall efficiency in trading operations.
-
-
-           ## System Architecture
-
-           Selenium (Web Scraping)  
-           → Data Extraction from Market Sources  
-           → PostgreSQL (Data Storage)  
-           → Streamlit + Plotly (Visualization Dashboard)  
-           → Open-Meteo API (Weather Data Integration)
-        </p>
-
-        <p class="metrics">
-            Scraper → Django → PostgreSQL → Streamlit Dashboard
-        </p>
+        <!-- ARCHITECTURE -->
+        <div class="exp-block">
+            <h4>System Architecture</h4>
+            <p class="architecture">
+                Selenium → Data Extraction → PostgreSQL → Streamlit & Plotly Dashboard → Weather API Integration
+            </p>
+        </div>
 
         <!-- SLIDER -->
         <div class="slider">
 
             <div class="slides active">
-                <img src="Hydro RTD & Output.png">
+                <img src="Hydro RTD & Output.png" alt="Hydro RTD and Output">
             </div>
 
             <div class="slides">
-                <img src="Solar RTD & Output Price.png">
+                <img src="Solar RTD & Output Price.png" alt="Solar RTD Output Price">
             </div>
 
             <div class="slides">
-                <img src="Solar.png">
+                <img src="Solar.png" alt="Solar Dashboard">
             </div>
 
             <div class="buttons">
@@ -256,13 +265,13 @@ body {
 
         </div>
 
+        <!-- METRICS -->
         <div class="metrics">
-            Reduced manual workload • Improved accuracy • Faster decisions
+            Reduced manual workload • Improved accuracy • Faster decision-making
         </div>
+
     </div>
-
 </div>
-
 <!-- SKILLS -->
 <div class="section">
     <h2>Technical Skills</h2>
