@@ -9,9 +9,10 @@
 
 <style>
 :root {
-    --bg: #070b14;
-    --card: rgba(18,26,43,0.7);
+    --bg: #05080f;
+    --card: rgba(18,26,43,0.65);
     --accent: #38bdf8;
+    --accent-soft: rgba(56,189,248,0.12);
     --text: #e6edf3;
     --muted: #94a3b8;
 }
@@ -24,128 +25,140 @@
 }
 
 body {
-    background: radial-gradient(circle at top, #0b1220, #070b14);
+    background: radial-gradient(circle at 20% 0%, #0b1220, #05080f);
     color: var(--text);
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: 110px;
 }
 
 .hero h1 {
-    font-size: 38px;
+    font-size: 42px;
     color: var(--accent);
+    letter-spacing: -0.5px;
 }
 
 .hero p {
     color: var(--muted);
     margin-top: 12px;
+    font-size: 15px;
 }
 
 .tag {
     margin-top: 18px;
     display: inline-block;
-    padding: 6px 14px;
-    background: rgba(30,41,59,0.7);
-    border-radius: 20px;
+    padding: 6px 16px;
+    background: rgba(30,41,59,0.6);
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 /* SECTIONS */
 .section {
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 }
 
 .section h2 {
     color: var(--accent);
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    font-size: 22px;
 }
 
 /* CARDS */
 .card, .exp-card {
     background: var(--card);
-    padding: 28px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
-    transition: 0.3s;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    transition: 0.35s ease;
+    position: relative;
 }
 
 .card:hover, .exp-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(56,189,248,0.3);
+    border-color: rgba(56,189,248,0.35);
 }
 
-/* EXPERIENCE */
-.exp-card {
-    margin-bottom: 25px;
-}
-
+/* HEADER */
 .exp-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
 }
 
 .exp-header span {
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .exp-focus {
     color: var(--accent);
-    margin: 10px 0 15px 0;
+    margin: 10px 0 18px 0;
     font-size: 13px;
 }
 
-/* NEW SPACING + STRUCTURE */
+/* BLOCKS */
 .exp-block {
     margin-top: 18px;
-    padding: 12px 14px;
-    border-radius: 8px;
+    padding: 16px;
+    border-radius: 10px;
     background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    transition: 0.3s;
+}
+
+.exp-block:hover {
+    border-color: rgba(56,189,248,0.25);
+    background: rgba(56,189,248,0.03);
 }
 
 .exp-block h4 {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 12px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
     color: var(--muted);
 }
 
 .exp-block p {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.75;
     margin-bottom: 8px;
 }
 
+/* ARCHITECTURE */
 .architecture {
     font-family: monospace;
-    color: var(--accent);
     font-size: 13px;
+    color: var(--accent);
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 6px;
 }
 
 /* METRICS */
 .metrics {
     margin-top: 18px;
-    color: var(--muted);
     display: flex;
     justify-content: space-between;
     font-size: 13px;
+    color: var(--muted);
 }
 
 /* SLIDER */
 .slider {
-    position: relative;
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -156,6 +169,7 @@ body {
 .slides img {
     width: 100%;
     border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .active {
@@ -168,42 +182,51 @@ body {
 }
 
 .buttons button {
-    background: var(--card);
-    color: var(--text);
-    border: none;
-    padding: 8px 14px;
+    padding: 8px 16px;
     margin: 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
+    color: var(--text);
     cursor: pointer;
-    border-radius: 6px;
+    transition: 0.25s;
 }
 
 .buttons button:hover {
     background: var(--accent);
+    color: black;
 }
 
 /* SKILLS */
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 18px;
 }
 
 .skill {
     background: var(--card);
     padding: 18px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56,189,248,0.3);
 }
 
 .skill img {
-    width: 35px;
+    width: 36px;
     margin-bottom: 8px;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    margin-top: 90px;
+    margin-top: 100px;
     color: var(--muted);
     font-size: 13px;
 }
@@ -278,9 +301,10 @@ body {
                 <button onclick="nextSlide()">Next</button>
             </div>
         </div>
+
     </div>
 </div>
-    
+
 <!-- SKILLS -->
 <div class="section">
     <h2>Technical Skills</h2>
