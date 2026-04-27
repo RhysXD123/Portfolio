@@ -34,6 +34,7 @@ body {
     padding: 40px 20px;
 }
 
+/* HERO */
 .hero {
     text-align: center;
     margin-bottom: 80px;
@@ -57,6 +58,7 @@ body {
     border-radius: 20px;
 }
 
+/* SECTIONS */
 .section {
     margin-bottom: 70px;
 }
@@ -66,6 +68,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* CARDS */
 .card, .exp-card {
     background: var(--card);
     padding: 22px;
@@ -80,6 +83,7 @@ body {
     border-color: rgba(56,189,248,0.3);
 }
 
+/* SKILLS */
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -98,6 +102,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* EXPERIENCE */
 .exp-card {
     margin-bottom: 20px;
 }
@@ -124,6 +129,50 @@ body {
     line-height: 1.6;
 }
 
+/* IMAGE HOVER + CLICK */
+.preview-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.preview-img:hover {
+    transform: scale(1.03);
+}
+
+.caption {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.lightbox img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.lightbox:target {
+    display: block;
+}
+
+/* FOOTER */
 .footer {
     text-align: center;
     margin-top: 80px;
@@ -142,8 +191,7 @@ body {
     <h1>Michael Joseph Llona</h1>
     <div class="tag">Energy Trader & Systems Builder</div>
     <p>
-        Energy trader with hands-on experience in WESM operations, managing generation assets 
-        and building automated systems for real-time market data and decision support.
+        Energy trader building automated systems for real-time market intelligence and decision support.
     </p>
 </div>
 
@@ -154,40 +202,58 @@ body {
     <div class="exp-card">
         <div class="exp-header">
             <h3>COGMA System</h3>
-            <span>Python • Django • PostgreSQL</span>
+            <span>Python • Django • PostgreSQL • Streamlit</span>
         </div>
 
         <p class="exp-focus">End-to-End Energy Market Data Platform</p>
 
         <p>
-            COGMA is a fully integrated system designed to automate the collection, processing, 
-            and visualization of energy market data within WESM environments. It transforms raw 
-            inputs into structured, real-time insights for trading and operational monitoring.
-        </p>
-
-        <p>
-            The system integrates automated scraping, backend processing using Django, and 
-            database storage to create a reliable data pipeline feeding real-time dashboards.
+            A system that automates data collection, processing, and visualization for energy trading workflows.
         </p>
 
         <p class="metrics">
-            Scraper (Selenium) → Data Processing → Django Backend → PostgreSQL → Dashboard
+            Scraper → Django → PostgreSQL → Streamlit Dashboard
         </p>
 
-        <p class="exp-focus">Applications</p>
+        <p class="exp-focus">System Preview</p>
+        <p class="caption">Screenshots use sanitized data.</p>
 
-        <p>
-            • Real-time monitoring of plant schedules and outputs<br>
-            • Weather-based analysis for solar and hydro generation<br>
-            • Automated reporting and compliance workflows<br>
-            • Centralized market data visibility
-        </p>
+        <!-- IMAGE 1 -->
+        <a href="#img1">
+            <img src="cogma-dashboard.png" class="preview-img">
+        </a>
+        <p class="caption">Overview dashboard.</p>
+
+        <!-- IMAGE 2 -->
+        <a href="#img2">
+            <img src="cogma-detail.png" class="preview-img">
+        </a>
+        <p class="caption">Detailed analysis view.</p>
+
+        <!-- IMAGE 3 -->
+        <a href="#img3">
+            <img src="cogma-data.png" class="preview-img">
+        </a>
+        <p class="caption">Structured data output.</p>
 
         <div class="metrics">
-            Reduced manual workload • Improved accuracy • Strengthened compliance • Faster decision-making
+            Reduced manual workload • Improved accuracy • Faster decisions
         </div>
     </div>
 
+</div>
+
+<!-- LIGHTBOXES -->
+<div id="img1" class="lightbox">
+    <a href="#"><img src="Hydro RTD & Output.png"></a>
+</div>
+
+<div id="img2" class="lightbox">
+    <a href="#"><img src="Solar.png"></a>
+</div>
+
+<div id="img3" class="lightbox">
+    <a href="#"><img src="Solar RTD & Output Price.png"></a>
 </div>
 
 <!-- SKILLS -->
@@ -199,80 +265,13 @@ body {
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"><p>Django</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"><p>Selenium</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><p>PostgreSQL</p></div>
+        <div class="skill"><img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.svg"><p>Streamlit</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><p>Git</p></div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><p>HTML</p></div>
     </div>
 </div>
 
-<!-- EXPERIENCE -->
-<div class="section">
-    <h2>Experience</h2>
-
-    <div class="exp-card">
-        <div class="exp-header">
-            <h3>WESM Trader</h3>
-            <span>Dec 2025 – Present</span>
-        </div>
-        <p class="exp-focus">Xidian Holdings Philippines, Inc</p>
-
-        <p>
-            Responsible for trading operations within WESM, handling solar and mini run-of-river hydro plants, 
-            ensuring compliance, executing trading decisions, and managing BCQ submissions in CRSS.
-        </p>
-
-        <div class="metrics">
-            Renewable asset trading • Market execution • Compliance management • BCQ submissions
-        </div>
-    </div>
-
-    <div class="exp-card">
-        <div class="exp-header">
-            <h3>WESM Compliance Assistant</h3>
-            <span>Jan 2025 – Dec 2025</span>
-        </div>
-        <p class="exp-focus">Sunwest Water and Electric Company 2</p>
-
-        <p>
-            Managed compliance and trading support for a mini-hydro portfolio, while developing automation 
-            systems to improve reporting workflows and operational efficiency.
-        </p>
-
-        <div class="metrics">
-            ~80% faster reports • 100% accurate tagging • ~90% reduced manual processing
-        </div>
-    </div>
-
-    <div class="exp-card">
-        <div class="exp-header">
-            <h3>Trading Specialist</h3>
-            <span>May 2024 – Nov 2024</span>
-        </div>
-        <p class="exp-focus">ACE Shared Services Inc.</p>
-
-        <p>
-            Executed trades across BESS, coal, bunker, diesel, and geothermal assets, supporting 
-            portfolio performance and market participation.
-        </p>
-
-        <div class="metrics">
-            Multi-asset trading • ASPA & BCQ submissions • Market coordination
-        </div>
-    </div>
-
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-    <h2>About</h2>
-
-    <div class="card">
-        <p>
-            I build systems at the intersection of energy trading and technology, transforming 
-            raw market data into structured insights through automation and data pipelines.
-        </p>
-    </div>
-</div>
-
+<!-- FOOTER -->
 <div class="footer">
     Michael Joseph Llona • Portfolio
 </div>
