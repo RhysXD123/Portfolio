@@ -31,13 +31,13 @@ body {
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 }
 
 .hero h1 {
@@ -47,11 +47,11 @@ body {
 
 .hero p {
     color: var(--muted);
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .tag {
-    margin-top: 15px;
+    margin-top: 18px;
     display: inline-block;
     padding: 6px 14px;
     background: rgba(30,41,59,0.7);
@@ -60,18 +60,18 @@ body {
 
 /* SECTIONS */
 .section {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 
 .section h2 {
     color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* CARDS */
 .card, .exp-card {
     background: var(--card);
-    padding: 22px;
+    padding: 28px;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.05);
     backdrop-filter: blur(12px);
@@ -83,33 +83,15 @@ body {
     border-color: rgba(56,189,248,0.3);
 }
 
-/* SKILLS */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 15px;
-}
-
-.skill {
-    background: var(--card);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.skill img {
-    width: 35px;
-    margin-bottom: 8px;
-}
-
 /* EXPERIENCE */
 .exp-card {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .exp-header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .exp-header span {
@@ -119,20 +101,52 @@ body {
 
 .exp-focus {
     color: var(--accent);
-    margin: 8px 0;
+    margin: 10px 0 15px 0;
     font-size: 13px;
 }
 
-.metrics {
-    margin-top: 10px;
+/* NEW SPACING + STRUCTURE */
+.exp-block {
+    margin-top: 18px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+}
+
+.exp-block h4 {
+    margin-bottom: 6px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
     color: var(--muted);
-    line-height: 1.6;
+}
+
+.exp-block p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.architecture {
+    font-family: monospace;
+    color: var(--accent);
+    font-size: 13px;
+}
+
+/* METRICS */
+.metrics {
+    margin-top: 18px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
 }
 
 /* SLIDER */
 .slider {
     position: relative;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .slides {
@@ -141,7 +155,7 @@ body {
 
 .slides img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .active {
@@ -149,7 +163,7 @@ body {
 }
 
 .buttons {
-    margin-top: 10px;
+    margin-top: 12px;
     text-align: center;
 }
 
@@ -157,7 +171,7 @@ body {
     background: var(--card);
     color: var(--text);
     border: none;
-    padding: 8px 12px;
+    padding: 8px 14px;
     margin: 5px;
     cursor: pointer;
     border-radius: 6px;
@@ -167,10 +181,29 @@ body {
     background: var(--accent);
 }
 
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 18px;
+}
+
+.skill {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.skill img {
+    width: 35px;
+    margin-bottom: 8px;
+}
+
 /* FOOTER */
 .footer {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 90px;
     color: var(--muted);
     font-size: 13px;
 }
@@ -202,40 +235,24 @@ body {
 
         <p class="exp-focus">WESM Monitoring System</p>
 
-        <!-- OVERVIEW -->
         <div class="exp-block">
             <h4>Overview</h4>
-            <p>
-                COGMA is a data automation and monitoring system designed to support energy trading operations and compliance tracking. It streamlines the collection, processing, and visualization of market and operational data, enabling faster and more informed decision-making.
-            </p>
+            <p>COGMA is a data automation and monitoring system designed to support energy trading operations and compliance tracking. It streamlines the collection, processing, and visualization of market and operational data, enabling faster and more informed decision-making.</p>
         </div>
 
-        <!-- DESCRIPTION -->
         <div class="exp-block">
             <h4>Description</h4>
-            <p>
-                The system automates market data extraction using Selenium-based web scraping, removing the need for manual data collection. Extracted data is stored in PostgreSQL, ensuring structured and reliable access.
-            </p>
-            <p>
-                Data is visualized through an interactive dashboard built with Streamlit and Plotly, allowing real-time monitoring of key metrics such as RTD, plant output, and market prices.
-            </p>
-            <p>
-                COGMA also integrates weather data via the Open-Meteo API, providing additional context that may impact plant performance.
-            </p>
+            <p>The system automates market data extraction using Selenium-based web scraping, removing the need for manual data collection. Extracted data is stored in PostgreSQL, ensuring structured and reliable access.</p>
+            <p>Data is visualized through an interactive dashboard built with Streamlit and Plotly, allowing real-time monitoring of key metrics such as RTD, plant output, and market prices.</p>
+            <p>COGMA also integrates weather data via the Open-Meteo API, providing additional context that may impact plant performance.</p>
         </div>
 
-        <!-- APPLICATION -->
         <div class="exp-block">
             <h4>Application</h4>
-            <p>
-                COGMA helps traders monitor price movements and analyze variances between RTD and actual output, supporting compliance with FAS, OCC, and DCS requirements.
-            </p>
-            <p>
-                By centralizing data and automating workflows, the system reduces manual effort, minimizes errors, and improves operational efficiency.
-            </p>
+            <p>COGMA helps traders monitor price movements and analyze variances between RTD and actual output, supporting compliance with FAS, OCC, and DCS requirements.</p>
+            <p>By centralizing data and automating workflows, the system reduces manual effort, minimizes errors, and improves operational efficiency.</p>
         </div>
 
-        <!-- ARCHITECTURE -->
         <div class="exp-block">
             <h4>System Architecture</h4>
             <p class="architecture">
@@ -243,35 +260,34 @@ body {
             </p>
         </div>
 
-        <!-- SLIDER -->
         <div class="slider">
-
             <div class="slides active">
-                <img src="Hydro RTD & Output.png" alt="Hydro RTD and Output">
+                <img src="Hydro RTD & Output.png">
             </div>
 
             <div class="slides">
-                <img src="Solar RTD & Output Price.png" alt="Solar RTD Output Price">
+                <img src="Solar RTD & Output Price.png">
             </div>
 
             <div class="slides">
-                <img src="Solar.png" alt="Solar Dashboard">
+                <img src="Solar.png">
             </div>
 
             <div class="buttons">
                 <button onclick="prevSlide()">Prev</button>
                 <button onclick="nextSlide()">Next</button>
             </div>
-
         </div>
 
-        <!-- METRICS -->
         <div class="metrics">
-            Reduced manual workload • Improved accuracy • Faster decision-making
+            <span> Reduced manual workload</span>
+            <span> Improved accuracy</span>
+            <span> Faster decision-making</span>
         </div>
 
     </div>
 </div>
+    
 <!-- SKILLS -->
 <div class="section">
     <h2>Technical Skills</h2>
