@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Michael Joseph Llona - Energy Systems Builder Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo \"Static HTML site - no build needed\"",
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RhysXD123/Portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "energy",
+    "trading"
+  ],
+  "author": "Michael Joseph Llona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RhysXD123/Portfolio/issues"
+  },
+  "homepage": "https://github.com/RhysXD123/Portfolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
